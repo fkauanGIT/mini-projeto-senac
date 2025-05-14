@@ -1,10 +1,10 @@
 <?php
 class Sessao {
     public function destruirSessao() {
-        session_start();
+        // Limpa as variáveis da sessão
+        $_SESSION = [];
+
+        // Destrói a sessão
         session_destroy();
-        header("Location: ./index.php");
-        exit();
     }
 }
-?>

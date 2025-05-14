@@ -4,6 +4,7 @@ if (!isset($_SESSION["usuario"])) {
     header("Location: index.php");
     exit;
 }
+$usuario = $_SESSION["usuario"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +14,7 @@ if (!isset($_SESSION["usuario"])) {
     <script src="scripts/local.js" defer></script>
     <script src="scripts/salvar-produto.js" defer></script>
 </head>
-<body>
+<body data-usuario="<?= htmlspecialchars($usuario) ?>">
 
 <section class="toolbar">
   <div class="toolbar-logo">
