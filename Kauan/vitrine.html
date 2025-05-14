@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vitrine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h2>Vitrine de Produtos</h2>
+<ul id="lista-produtos"></ul>
+
+<script>
+    const lista = document.getElementById("lista-produtos");
+    const produtos = JSON.parse(localStorage.getItem("produtos")) || [];
+
+    produtos.forEach(p => {
+        const item = document.createElement("li");
+        item.textContent = `${p.nome} - R$${p.preco}`;
+        lista.appendChild(item);
+    });
+</script>
+</body>
+</html>
