@@ -1,35 +1,28 @@
 <?php
 session_start();
 
-$usuarioAdmin = [
-    "nome" => "admin",
-    "email" => "admin@senac.com",
-    "senha" => "1234"
-];
-
-$usuarioPadrao = [
-    "nome" => "teste",
-    "email" => "teste@senac.com",
-    "senha" => "1234"
-];
+$usuariosJson = file_get_contents("storage/usuarios.json");
+$usuarios = json_decode($usuariosJson, true);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $senha = $_POST["senha"];
 
-    if ($nome == $usuarioPadrao["nome"] && $email == $usuarioPadrao["email"] && $senha == $usuarioPadrao["senha"]) {
-        $_SESSION["usuario"] = $nome;
+    foreach ($usuarios as $usuario) {
+        if ($nome == $usuario["nome"] && $email == $usuario["email"] && $senha == $usuario["senha"]) {
+            $_SESSION["usuario"] = $nome;
 
-        if (isset($_POST["lembrar"])) {
-            setcookie("email", $email, time() + 3600 * 24 * 30);
+            if (isset($_POST["lembrar"])) {
+                setcookie("email", $email, time() + 3600 * 24 * 30);
+            }
+
+            header("Location: dashboard.php");
+            exit;
         }
-
-        header("Location: dashboard.php");
-        exit;
-    } else {
-        $erro = "Informações inválidas!";
     }
+    
+    $erro = "Informações inválidas!";
 }
 
 $emailSalvo = $_COOKIE["email"] ?? "";
