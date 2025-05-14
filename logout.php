@@ -1,3 +1,6 @@
 <?php
-// Encerrar sessão
+ require_once 'classes/Sessao.php';
+ 
+ $sessao = new Sessao();
+ $sessao->destruirSessao();
 ?>
