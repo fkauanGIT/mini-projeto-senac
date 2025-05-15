@@ -107,11 +107,16 @@
   
   /* Estilo para Modo Escuro */
   body.modo-escuro {
-    background-color: #121212;
+    background-color: #000000;
+    color: #ffffff;
   }
-  body.modo-escuro p {
+  body.modo-escuro  {
      color: #fff;
   }
+
+      .acessibility{
+        color: #000;
+      }
   
   /* Estilo para Texto Maior */
   body.texto-maior {
