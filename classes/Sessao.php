@@ -1,10 +1,20 @@
 <?php
 class Sessao {
-    public function destruirSessao() {
-        // Limpa as variáveis da sessão
-        $_SESSION = [];
+    public function iniciarSessao($usuario) {
+        $_SESSION['usuario'] = serialize($usuario);
+    }
 
-        // Destrói a sessão
+    public function destruirSessao() {
+        $_SESSION = [];
         session_destroy();
     }
+
+    public function validarSessao() {
+        return isset($_SESSION['usuario']);
+    }
+
+    public function getUsuario() {
+        return unserialize($_SESSION['usuario']);
+    }
 }
+?>
