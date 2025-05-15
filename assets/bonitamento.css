@@ -46,7 +46,7 @@ button{
     padding: 12px 12px 12px 12px;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(90deg,rgba(244, 137, 250, 1) 0%, rgba(125, 4, 125, 1) 88%);
+    background: linear-gradient(90deg,rgba(244, 137, 250, 1) , rgba(125, 4, 125, 1));
     width: 400px;
     height: 600px;
     border-radius: 30px;
