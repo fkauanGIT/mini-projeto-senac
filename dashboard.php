@@ -60,6 +60,19 @@ $usuario = $sessao->getUsuario();
           <button type="button" id="btn-modo-escuro">Ativar Modo Escuro</button>
         </div>
       </div>
+
+      <h3>Outros</h3>
+      <div class="acessibility-page-grid">
+        <div class="acessibility-page-grid-content">
+        <h3>Idioma</h3>
+        <select name="Idioma" id="idioma-select"> 
+          <option value="portugues">português</option>
+          <option value="ingles">Inglês</option>
+          <option value="chines">Chinês</option>
+          <option value="russo">Russo</option>
+        </select>
+        </div>
+      </div>
     </div>
   </section>
 
