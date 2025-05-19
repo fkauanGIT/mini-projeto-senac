@@ -2,11 +2,11 @@
     {
         "nome": "admin",
         "email": "admin@senac.com",
-        "senha": "1234"
+        "senha": "$2y$10$Zx.7Viy8lSxXK3UGK2LfH.QlKm8xJbi9nxRIMVRP6HgMnFZ9ChYxq"
     },
     {
-        "nome": "teste",
-        "email": "teste@senac.com",
-        "senha": "1234"
+        "nome": "Luiz",
+        "email": "luiz@gmail.com",
+        "senha": "$2y$10$6LkchGtoHYXqkcIYMFalmOV6OFGRfQ4K3zGNloFCa\/kMr2JQ75WOe"
     }
 ]

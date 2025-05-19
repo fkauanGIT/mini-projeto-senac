@@ -1,3 +1,5 @@
+// Script para o Cadastro de Produtos
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("form-produto");
 
