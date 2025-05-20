@@ -1,0 +1,51 @@
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+  
+
+.content-form{
+    height: 50%;
+    width: 30%;
+    background-color: rgba(124, 121, 121, 0.699);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#form-produto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#form-produto button{
+    padding: 8px 40px;
+    border-radius: 20px;
+    border: none;
+
+}
+#form-produto button:hover {
+    transform: scale(1.1); /* aumenta 10% na largura e altura */
+    transition: transform 0.1s ease;
+}
+
+.content-form h3 a{
+    text-decoration: none;
+    color: #000000;
+}
+.content-form h3:hover{
+    transform: scale(1.1); /* aumenta 10% na largura e altura */
+    transition: transform 0.1s ease;
+}

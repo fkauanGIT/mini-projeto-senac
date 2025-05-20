@@ -17,6 +17,7 @@ $usuario = $sessao->getUsuario();
 <head>
     <title>Home</title>
     <link rel="stylesheet" href="assets/index.css">
+    <link rel="stylesheet" href="assets/dashboard.css">
     <script src="scripts/local.js" defer></script>
     <script src="scripts/salvar-produto.js" defer></script>
 </head>
@@ -41,6 +42,16 @@ $usuario = $sessao->getUsuario();
       </ul>
     </div>
   </section>
+
+  <div class="content-form">
+  <h3>Cadastrar Produto</h3>
+  <form id="form-produto">
+      Nome: <input type="text" id="nome"><br>
+      Preço: <input type="number" id="preco"><br>
+      <button type="submit">Salvar</button>
+  </form>
+  <h3><a href="vitrine.html">Ver Vitrine</a></h3>
+  </div>
 
   <section class="acessibility" id="painel-acessibilidade" style="display: none;">
     <div class="acessibility-page">
@@ -75,15 +86,5 @@ $usuario = $sessao->getUsuario();
       </div>
     </div>
   </section>
-
-  <h3>Cadastrar Produto</h3>
-  <form id="form-produto">
-      Nome: <input type="text" id="nome"><br>
-      Preço: <input type="number" id="preco"><br>
-      <button type="submit">Salvar</button>
-  </form>
-
-  <hr>
-  <a href="vitrine.html">Ver Vitrine</a>
 </body>
 </html>
